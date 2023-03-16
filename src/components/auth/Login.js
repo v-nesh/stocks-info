@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let reg = /[a-z0-9]{5,10}/;
+    let reg = /^[a-zA-Z]{5,10}$/;
     if (reg.test(userName) && reg.test(userPassword)) {
       toast.success("Login Successfully");
       navigate("/stock-data");
